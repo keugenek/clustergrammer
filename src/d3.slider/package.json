@@ -50,9 +50,10 @@
     "url": "https://github.com/turban/d3.slider/issues"
   },
   "dependencies": {
-    "browserify": "~4.1.5",
+    "browserify": "~13.2.0",
     "cssify": "~0.5.1",
-    "d3": "~3.4.8"
+    "d3": "~3.4.8",
+    "@snyk/protect": "latest"
   },
   "description": "D3.js Slider",
   "devDependencies": {},
@@ -69,7 +70,10 @@
     "url": "git://github.com/turban/d3.slider.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "snyk": true
 }
